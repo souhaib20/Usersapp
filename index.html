@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="index.css">
+    <title>myapptest</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="tableDiv">
+            <h2 class="list"><center>Listes des utilisateurs</h2></center>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID d'utilisateur</th>
+                        <th>Date de création</th>
+                        <th>Etat d'utilisateur</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Nom d'utilisateur</th>
+                        <th>Matricule</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <th>123987512831239</th>
+                        <th>19/06/2022</th>
+                        <th>Active</th>
+                        <th>Halli</th>
+                        <th>Souhaib</th>
+                        <th>souhaib_b</th>
+                        <th>123151231</th>
+                        <th><button class="save"></button></th>
+                    </tr>
+                </thead>
+                <tbody class="tableBody">
+
+
+
+                </tbody>
+            </table>
+        </div>
+        <div class="add2">
+            <button id="ajouter" onclick="show_h()">Ajouter un nouveau utilisateur </button>
+        </div>
+        <div class="background hide"></div>
+
+
+            <div class="add" id="lol">
+
+            <center> <h1 class="font-weight-bold "> Nouveau utilisateur</h1></center>
+            
+
+                    <div class="flexRow" style="padding-top: 20px;">
+                        <form action="#" id="submitFormID">
+                            <div class="flexRow" style="padding-top: 20px;">
+                        <div class="flex">
+                            <label for="">Nom :</label>
+                            <input required id="Nom" value="" class="input" type="text">
+                        </div>
+
+                        <div class="flex">
+                            <label for="">Prénom :</label>
+                            <input required id="Prenom" value="   " class="input"  type="text">
+                        </div>
+
+                        <div class="flex">
+                            <label for="">Etat :</label>
+                            <select class="input" name="" id="Etat">
+                                <option value="selectionner votre etat" disabled>selectionner votre etat :</option>
+                                <option value="En cours de validation" selected>En cours de validation</option>
+                                <option value="Validé"> Validé </option>
+                                <option value="Rejeté">Rejeté</option>
+                            </select>
+                        </div>
+
+                        <div class="flex margin">
+                            <label for="">User :</label>
+                            <input required id="User" value="" class="input" placeholder="Nom d'utilisateur" type="text">
+                        </div>
+
+                        <div class="flex">
+                            <label for=""> Date de création :</label>
+                            <input required id="Date" value="" class="input" type="date">
+                        </div>
+
+                        <div class=" flexRow">
+                            <div class="flex">
+                                <label for="">Matricule :</label>
+                                <input required id="Matricule"  placeholder="12345678" value="" class="input" type="text">
+                          
+                                <p id="warning" class="hide" style=" margin-left: 10px; padding-top: 20px; color: red; "> .
+                                    matriculation doit contenir juste
+                                    les nombres</p>
+                            </div>
+                        <button value="" type="submit" class="btn  save">Valider</button>
+
+
+                    </div>
+
+
+                </div>
+                </form>
+
+
+            </div>
+
+        </div>
+        <!-- Modal delete user -->
+    <div class="modalClass" id="displayDeleteModal">
+        <div class="modalBody">
+            <h2>voulez vous suprimer cette utilisateur</h2>
+            <div class="OuiNonBtn">
+                <button id="confirmDeleteUser">OUI</button>
+                <button id="cancelDeleteUser">NON</button>
+            </div>
+        </div>
+    </div>
+    
+
+
+         <script src="./index.js"></script>
+        <script src="./scripts/getusers.js"></script>
+        <script src="./scripts/dataapp.js"></script>
+    <script src="./scripts/script.js"></script>
+    </body>
+
+    </html>
